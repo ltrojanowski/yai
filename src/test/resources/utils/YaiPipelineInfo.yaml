@@ -1,0 +1,8 @@
+yaiVersion: "0.1.0"
+domain: "stores"
+teamMail: "asp@example.com"
+members:
+  - name: "Jan"
+    mail: "jan@example.com"
+  - name: "Igor"
+    mail: "igor@example.com"

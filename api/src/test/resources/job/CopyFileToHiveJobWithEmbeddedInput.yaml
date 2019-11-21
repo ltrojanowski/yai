@@ -1,0 +1,16 @@
+yaiVersion: "0.1.0"
+type: CopyFileToSparkJob
+name: asp-sample-file-copy-job
+input:
+  value:
+    yaiVersion: "0.1.0"
+    type: IngestNode
+    filePath: /home/svc-asp-dev/sample/
+    address: pphdpxx002.example.org
+    user: svc-asp-dev
+    file:
+      ref: "../file/CsvFile.yaml"
+output:
+  ref: "../io/HiveTable.yaml"
+file:
+  ref: "../files/CsvFile.yaml"

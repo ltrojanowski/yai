@@ -1,0 +1,8 @@
+type: CopyFileToHiveJob
+name: asp-sample-file-copy-job
+input:
+  ref: "../io/IngestNode.yaml"
+output:
+  ref: "../io/HiveTable.yaml" # or maybe spark table ??
+file:
+  ref: "../files/CsvFile.yaml"

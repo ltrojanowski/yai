@@ -1,0 +1,4 @@
+value:
+  yaiVersion: "0.1.0"
+  schema: sample_schema
+  table: sample_table_name

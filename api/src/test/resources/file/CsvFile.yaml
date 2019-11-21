@@ -1,0 +1,46 @@
+type: CsvFile
+filePrefix: "ASP_SAMPLE_FILE_{timestamp}"
+description: "this is a sample csv file description"
+estimatedArrivalTime: "5 5 * * *"
+encoding: utf-8
+dataOwners:
+  - name: "Jack Johnson"
+    email: "jack@example.com"
+  - name: "Sample data team"
+    email: "team@example.com"
+schema:
+  columns:
+    - name: col1
+      type: string
+      description: "this is the first column. It is awesome"
+    - name: col2
+      type: integer
+      description: "some other description"
+    - name: col3
+      type: number
+      nullable: true
+      format: float
+    - name: col4
+      type: number
+      format: double
+    - name: col5
+      type: integer
+      format: int32
+    - name: col6
+      type: integer
+      format: int64
+    - name: col7
+      type: boolean
+    - name: col8
+      type: array
+      items:
+        type: integer
+        format: int32
+        nullable: true
+#    - name: col9
+#      type: object
+#      properties:
+#        foo:
+#          type: integer
+#        bar:
+#          type: string
