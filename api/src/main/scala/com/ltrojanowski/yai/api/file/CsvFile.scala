@@ -12,5 +12,5 @@ case class CsvFile(
     estimatedArrivalTime: String,
     encoding: String,
     dataOwners: List[DataOwner],
-    schema: CsvSchema
+    schema: RefOrValue[CsvSchema]
 )
