@@ -1,10 +1,12 @@
-package com.ltrojanowski.yai.sbt.plugin
+package com.ltrojanowski.yai.api
 
 import java.io.{FileInputStream, InputStreamReader}
 
-import com.ltrojanowski.yai.sbt.plugin.api.file.CsvFile
-import com.ltrojanowski.yai.sbt.plugin.api.utils.YaiHelpers
-import com.ltrojanowski.yai.sbt.plugin.api.utils.CirceSerializers._
+import com.ltrojanowski.yai.api.utils.YaiHelpers
+//import com.ltrojanowski.yai.sbt.plugin.api.file.CsvFile
+//import com.ltrojanowski.yai.sbt.plugin.api.utils.YaiHelpers
+//import com.ltrojanowski.yai.sbt.plugin.api.utils.CirceSerializers._
+
 import scala.util.Right
 import org.scalatest._
 

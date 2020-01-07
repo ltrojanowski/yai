@@ -1,10 +1,7 @@
 package com.ltrojanowski.yai.sbt.plugin
 
 import com.ltrojanowski.yai.api.schema.{BaseField, ColumnField}
-
 import scala.meta.{Ctor, Defn, Mod, Name, Self, Template, Term, Type}
-
-//import scala.meta.{Ctor, Defn, Mod, Name, Self, Template, Term, Type}
 
 object ScalaCodeGenerators {
 

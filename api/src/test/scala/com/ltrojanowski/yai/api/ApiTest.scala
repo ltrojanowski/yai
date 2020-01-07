@@ -15,9 +15,10 @@ import com.ltrojanowski.yai.api.utils.{
   YaiVersion,
   YaiVersionContext
 }
-import io.circe.Decoder
-import io.circe.generic.extras.Configuration
-import io.circe.yaml.parser
+import _root_.io.circe.Decoder
+import _root_.io.circe.generic.extras.Configuration
+import _root_.io.circe.yaml.parser
+import com.ltrojanowski.yai.api.schema.{ColumnField, CsvSchema, NestedItem}
 import org.scalatest._
 
 import scala.util.Right
@@ -48,23 +49,25 @@ class ApiTest extends FlatSpec with Matchers {
           DataOwner(name = "Jack Johnson", email     = "jack@example.com"),
           DataOwner(name = "Sample data team", email = "team@example.com")
         ),
-        schema = Schema(
-          columns = List(
-            ColumnField(
-              name        = "col1",
-              `type`      = "string",
-              description = Some("this is the first column. It is awesome")
-            ),
-            ColumnField(name = "col2", `type` = "integer", description = Some("some other description")),
-            ColumnField(name = "col3", `type` = "number", nullable = true, format = Some("float")),
-            ColumnField(name = "col4", `type` = "number", format = Some("double")),
-            ColumnField(name = "col5", `type` = "integer", format = Some("int32")),
-            ColumnField(name = "col6", `type` = "integer", format = Some("int64")),
-            ColumnField(name = "col7", `type` = "boolean"),
-            ColumnField(
-              name   = "col8",
-              `type` = "array",
-              items  = Some(NestedItem(`type` = "integer", nullable = true, format = Some("int32")))
+        schema = Value(
+          CsvSchema(
+            columns = List(
+              ColumnField(
+                name        = "col1",
+                `type`      = "string",
+                description = Some("this is the first column. It is awesome")
+              ),
+              ColumnField(name = "col2", `type` = "integer", description = Some("some other description")),
+              ColumnField(name = "col3", `type` = "number", nullable = true, format = Some("float")),
+              ColumnField(name = "col4", `type` = "number", format = Some("double")),
+              ColumnField(name = "col5", `type` = "integer", format = Some("int32")),
+              ColumnField(name = "col6", `type` = "integer", format = Some("int64")),
+              ColumnField(name = "col7", `type` = "boolean"),
+              ColumnField(
+                name   = "col8",
+                `type` = "array",
+                items  = Some(NestedItem(`type` = "integer", nullable = true, format = Some("int32")))
+              )
             )
           )
         )

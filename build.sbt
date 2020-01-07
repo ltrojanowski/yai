@@ -19,3 +19,17 @@ lazy val yai = (project in file("."))
     libraryDependencies ++= commonDeps
   )
   .dependsOn(api)
+  .aggregate(api)
+
+lazy val docs = (project in file("docs"))
+  .enablePlugins(MicrositesPlugin)
+  .settings(
+    micrositeName := "yai-toolkit",
+    micrositeDescription := "YAI - yet another ingest",
+    micrositeTwitterCreator := "@ltrojanowski",
+    micrositeGithubOwner := "ltrojanowski",
+    micrositeGithubRepo := "yai-docs",
+    micrositeGitterChannel := false,
+    micrositeHighlightLanguages ++= Seq("yaml")
+  )
+  .settings(name := "yai-docs", version := "0.1", scalaVersion := "2.12.8")
